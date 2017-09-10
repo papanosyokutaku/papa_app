@@ -30,7 +30,9 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "services", force: :cascade do |t|
     t.string "title"
     t.string "image_url"
-    t.text "description"
+    t.text "proposal"
+    t.text "terget"
+    t.text "want_to"
     t.text "request"
     t.integer "user_id"
   end
@@ -42,8 +44,8 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "user_type"
     t.string "password"
+    t.integer "user_type"
   end
 
 end
