@@ -11,6 +11,8 @@ create_table "services", force: :cascade do |t|
   t.text     "description"
   t.text     "request"
   t.integer  "user_id"
+  t.datetime "created_at"
+  t.datetime "updatad_at"
 end
 
 create_table "sites", force: :cascade do |t|
@@ -22,6 +24,7 @@ create_table "dailykpis", force: :cascade do |t|
   t.integer  "pv"
   t.integer  "uu_count"
   t.integer  "site_id"
+  t.datetime "created_at"
 end
 
 create_table "comments", force: :cascade do |t|
