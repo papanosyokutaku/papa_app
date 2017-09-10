@@ -1,0 +1,24 @@
+<% @releases.each do |release| %>
+  <div>
+    <div>
+      <a href="#"><%= image_tag 'cool_site_exsample.jpg' %></a> 
+    </div>
+    <div>
+      <p>
+        <%= link_to release[:service][:name], release[:service][:url] %>
+        <span>
+          <i class="fa fa-edge"></i>
+          <%= release[:pv_count] %>
+        </span>
+      </p>
+      <p>
+        <% release[:designers].each do |designer| %>
+          <%= link_to designer[:name], designer[:page] %>
+        <% end %>
+      </p>
+    </div>
+    <div>
+      <i class="fa fa-facebook-square"></i><i class="fa fa-twitter-square"></i>
+    </div>
+  </div>
+<% end %>
