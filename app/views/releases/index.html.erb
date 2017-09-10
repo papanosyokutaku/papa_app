@@ -1,7 +1,9 @@
+<%= render 'shared/header.html.erb' %>
+
 <% @releases.each do |release| %>
   <div>
     <div>
-      <a href="#"><%= image_tag 'cool_site_exsample.jpg' %></a> 
+      <a href="#"><%= image_tag 'cool_site_exsample.jpg', :class => 'top_img' %></a> 
     </div>
     <div>
       <p>
@@ -22,3 +24,5 @@
     </div>
   </div>
 <% end %>
+
+<%= render 'shared/footer.html.erb' %>
