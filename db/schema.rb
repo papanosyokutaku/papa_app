@@ -10,46 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170910001133) do
-  
+ActiveRecord::Schema.define(version: 20170910034713) do
+
   create_table "comments", force: :cascade do |t|
-    t.text "description"
-    t.integer "service_id"
+    t.string "user"
+    t.string "reference"
+    t.string "service"
+    t.string "context"
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "dailykpis", force: :cascade do |t|
-    t.integer "pv"
-    t.integer "uu_count"
-    t.integer "site_id"
-  end
-
-  create_table "releases", force: :cascade do |t|
-    t.integer "service_id"
-  end
-
-  create_table "services", force: :cascade do |t|
-    t.string "title"
-    t.string "image_url"
-    t.text "proposal"
-    t.text "terget"
-    t.text "want_to"
-    t.text "request"
-    t.integer "user_id"
-  end
-
-  create_table "sites", force: :cascade do |t|
-    t.string "site_url"
-    t.integer "service_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "password"
-    t.integer "user_type"
-  end
-  
   create_table "releases", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
