@@ -8,7 +8,9 @@ end
 create_table "services", force: :cascade do |t|
   t.string   "title"
   t.string   "image_url"
-  t.text     "description"
+  t.text     "proposal"
+  t.text     "terget"
+  t.text     "want_to"
   t.text     "request"
   t.integer  "user_id"
 end
